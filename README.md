@@ -21,4 +21,5 @@ python3 main.py -o negatives -l 1000
 ```
 - By default annotations along with images are stored in annotations folder, you can change it [here](https://github.com/maldivien/Coco-to-yolo-downloader/blob/0793c9ae9cbe0e17d7cac93709fdd0abc2f16811/main.py#L131)
 - Image download will be skipped if already exists. However, annotations will always be appended to the existing file so it's advisable to delete *.txt file before a re-run 
+- **Do not delete or modify** [coco-names.txt](https://github.com/maldivien/Coco-to-yolo-downloader/blob/main/coco-names.txt)
 

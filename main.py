@@ -47,7 +47,7 @@ def download_coco(catid, catname, classid, download_limit):
     print("Download Started...! Category: "+ catname)
     counter = 0
     for im in images:
-        if counter == limit:
+        if counter == download_limit:
             print("Limit of " + str(counter) + " Images download for class " + cateogry +".")
             break
         image_id = im['id']
@@ -157,19 +157,17 @@ def main():
     coco.info()
     category_ids = list(map(filter_coco, categories_intrest))  
     category_names = [row[0] for row in categories_intrest]
-
-    
     
     if negative:
-        print(category_ids)
         download_negatives(negatives_folder, download_limit)
     else:
         catIds = coco.getCatIds(catNms=category_names)
-        threads = [category_ids]
+        threads = []
         try:
             for catid in catIds:
                 catname = coco_names[catid - 1]
                 #custom classId to be added to annotation file
+                print(catname)
                 classid = [x for x in categories_intrest if str(catname) in x][0][1]
 
                 thread = threading.Thread(target=download_coco, args=(catid,catname, classid, download_limit)) 

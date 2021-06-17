@@ -1,5 +1,2 @@
-car, 0
-bus, 1
-truck, 2
-bicycle, 3
-motorcycle, 4
+truck, 0
+bus, 3

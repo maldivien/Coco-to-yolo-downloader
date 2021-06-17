@@ -7,7 +7,7 @@
 
 ## Requirements:
 - ``` pip3 install pycococtools ```
-- COCO Dataset "instances_train2017.json" file
+- COCO Dataset "instances_train2017.json" file from [here](https://cocodataset.org)
 
 ## Run:
 - Update [categories_to_download.txt](https://github.com/maldivien/Coco-to-yolo-downloader/blob/main/categories_to_download.txt) file with category names and calss numbers that you want to add.

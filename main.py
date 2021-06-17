@@ -143,7 +143,7 @@ def main():
     if args['limit']:
         download_limit = args['limit']
 
-    print("Download Limit: " + download_limit)
+    print("Download Limit: " + str(download_limit))
 
 
     with open("categories_to_download.txt") as file:

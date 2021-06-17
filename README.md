@@ -3,6 +3,7 @@
 - Downloads COCO dataset by multiple image categories in parallel threads, converts COCO annotations to YOLO format and stored in respective .txt files
 - Download Negative images which excludes the categories in [categories_to_download.txt](https://github.com/maldivien/Coco-to-yolo-downloader/blob/d7726b02148990bc60589dd093ea89e06ff3dc56/categories_to_download.txt#L1)
 - Can include custom class numbers to be added to annoation, just add desired numbers to [categories_to_download.txt](https://github.com/maldivien/Coco-to-yolo-downloader/blob/d7726b02148990bc60589dd093ea89e06ff3dc56/categories_to_download.txt#L1)
+- Can limit downloads based on per class  
 
 ## Requirements:
 - ``` pip3 install pycococtools ```
@@ -10,11 +11,11 @@
 
 ## Run:
 - Update [categories_to_download.txt](https://github.com/maldivien/Coco-to-yolo-downloader/blob/main/categories_to_download.txt) file with category names and calss numbers that you want to add.
-- To download coco dataset: 
+- To download coco dataset with limit of 5000 images per class: 
 ``` 
  python3 main.py -o download -l 5000
 ```
-- To download negatives from coco dataset: 
+- To download negatives from coco dataset with limit of 1000: 
 ``` 
 python3 main.py -o negatives -l 1000
 ```

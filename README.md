@@ -1,4 +1,4 @@
-# Coco to Yolo Downloader (Images, Annoatations, Negatives)
+# COCO to Yolo Downloader (Images, Annoatations, Negatives)
 
 - Downloads COCO dataset images by multiple categories in parallel threads, converts COCO annotations to YOLO format and stored in respective .txt files
 - Download Negative images which excludes the categories in [categories_to_download.txt](https://github.com/maldivien/Coco-to-yolo-downloader/blob/d7726b02148990bc60589dd093ea89e06ff3dc56/categories_to_download.txt#L1)
